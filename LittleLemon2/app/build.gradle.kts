@@ -1,6 +1,9 @@
 plugins {
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0-RC1"
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id ("kotlin-kapt")
+
 }
 
 android {
@@ -50,7 +53,15 @@ android {
 }
 
 dependencies {
-
+    implementation ("com.github.bumptech.glide:compose:1.0.0-beta01")
+    implementation (libs.androidx.runtime.livedata)
+    implementation(libs.androidx.room.runtime)
+    kapt (libs.androidx.room.compiler)
+    implementation(libs.ktor.client.android)
+    implementation(libs.ktor.client.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation (libs.androidx.datastore.preferences)
+    implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
