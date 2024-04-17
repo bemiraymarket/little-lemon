@@ -38,6 +38,7 @@ import com.example.littlelemon.ui.theme.BlackLittleLemon
 import com.example.littlelemon.ui.theme.GreyLittleLemon
 import com.example.littlelemon.ui.theme.WhiteLittleLemon
 import com.example.littlelemon.ui.theme.YellowLittleLemon
+import com.example.littlelemon.ui.theme.karlaFontFamily
 
 class PreferencesManager(context: Context) {
     private val sharedPreferences: SharedPreferences =
@@ -86,6 +87,8 @@ fun Onboarding(navController: NavHostController) {
                 Text(
                     "Let's get to know you",
                     color= WhiteLittleLemon,
+                    fontFamily = karlaFontFamily,
+                    fontWeight = FontWeight.Bold,
                     fontSize = 20.sp,
                     textAlign = TextAlign.Center,
                     modifier = Modifier
@@ -96,14 +99,18 @@ fun Onboarding(navController: NavHostController) {
                 Spacer(modifier = Modifier.padding(20.dp))
                 Text("Personal information",
                     fontSize = 18.sp,
-                    fontWeight = FontWeight.Medium,
-                    textAlign = TextAlign.Left,
+                    fontFamily = karlaFontFamily,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(20.dp)
                     )
                 Spacer(modifier = Modifier.padding(20.dp))
                 Text("First Name",
+                    fontFamily = karlaFontFamily,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 16.sp,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(15.dp, bottom = 0.dp)
@@ -112,14 +119,16 @@ fun Onboarding(navController: NavHostController) {
                 OutlinedTextField(
                     value = firstName,
                     onValueChange ={value -> firstName = value},
-                    placeholder = { Text("First name", fontSize = 15.sp)},
+                    placeholder = { Text("First name", fontFamily = karlaFontFamily, fontSize = 16.sp)},
                     modifier= Modifier
                         .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
                         .fillMaxWidth()
 
                 )
                 Text("Last Name",
-
+                        fontFamily = karlaFontFamily,
+                        fontWeight = FontWeight.Medium,
+                        fontSize = 16.sp,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(15.dp, top = 15.dp, bottom = 0.dp)
@@ -128,12 +137,15 @@ fun Onboarding(navController: NavHostController) {
                 OutlinedTextField(
                     value = lastName,
                     onValueChange ={value -> lastName = value},
-                    placeholder = { Text("Last name")},
+                    placeholder = { Text("Last name",fontFamily = karlaFontFamily, fontSize = 16.sp)},
                     modifier= Modifier
                         .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
                         .fillMaxWidth()
                 )
                 Text("Email",
+                    fontFamily = karlaFontFamily,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 16.sp,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(15.dp, top = 15.dp, bottom = 0.dp)
@@ -142,7 +154,7 @@ fun Onboarding(navController: NavHostController) {
                 OutlinedTextField(
                     value = emailAddress,
                     onValueChange = {value -> emailAddress = value},
-                    placeholder = { Text("Email address")},
+                    placeholder = { Text("Email address",fontFamily = karlaFontFamily, fontSize = 16.sp)},
                     modifier= Modifier
                         .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
                         .fillMaxWidth()
@@ -165,8 +177,9 @@ fun Onboarding(navController: NavHostController) {
                     Text(
                         text = "Register",
                         textAlign = TextAlign.Center,
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Normal,
+                        fontFamily = karlaFontFamily,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Medium,
                         color= BlackLittleLemon,
                         modifier=Modifier.fillMaxWidth()
                     )

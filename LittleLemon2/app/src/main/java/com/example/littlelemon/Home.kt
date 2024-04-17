@@ -1,11 +1,13 @@
 package com.example.littlelemon
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -52,6 +54,9 @@ import com.example.littlelemon.ui.theme.ClayLittleLemon
 import com.example.littlelemon.ui.theme.GreyLittleLemon
 import com.example.littlelemon.ui.theme.WhiteLittleLemon
 import com.example.littlelemon.ui.theme.YellowLittleLemon
+import com.example.littlelemon.ui.theme.karlaFontFamily
+import com.example.littlelemon.ui.theme.markazitextFontFamily
+import java.text.DecimalFormat
 
 
 @Composable
@@ -77,31 +82,44 @@ fun Home(navController: NavHostController) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(300.dp)
-                .background(GreyLittleLemon)
+                .background(GreyLittleLemon),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
         ) {
             Text(
                 text = "Little Lemon",
-                fontSize = 32.sp,
+                modifier = Modifier
+                    .padding(start = 10.dp, top = 0.dp)
+                    .height(50.dp),
+                fontSize = 60.sp,
+                fontFamily = markazitextFontFamily,
+                fontWeight = FontWeight.Medium,
                 color=  YellowLittleLemon,
-                modifier = Modifier.padding(start=10.dp,top=10.dp)
             )
             Text(
                 "Chicago",
-                fontSize = 24.sp,
-                color= WhiteLittleLemon,
-                modifier = Modifier.padding(start=10.dp)
+                modifier = Modifier
+                    .padding(start = 10.dp, top = 0.dp)
+                    .height(45.dp),
+                fontFamily = markazitextFontFamily,
+                fontSize = 40.sp,
+                color = WhiteLittleLemon,
             )
-            Row (horizontalArrangement = Arrangement.SpaceBetween,
+            Row (
+                horizontalArrangement = Arrangement.SpaceAround,
                 modifier= Modifier
                     .fillMaxWidth()
-                    .padding(10.dp)
+                    .padding(start = 0.dp, top = 0.dp)
                     .height(130.dp),
-            ){
-                Text(text = "We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist",
-                    fontSize = 20.sp,
-                    color= WhiteLittleLemon,
-                    modifier = Modifier.width(230.dp)
+                ){
+                Text(text = "We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.",
+                    fontFamily = karlaFontFamily,
+                    fontWeight = FontWeight.Normal,
+                    lineHeight = 16.sp,
+                    fontSize = 16.sp,
+                    color = WhiteLittleLemon,
+                    modifier = Modifier
+                        .width(230.dp)
+                        .padding(top = 10.dp)
                 )
                 Image(
                     painterResource(id = R.drawable.hero_image) ,
@@ -117,7 +135,7 @@ fun Home(navController: NavHostController) {
             }
             TextField(
                 value = searchPhrase,
-                placeholder = { Text(text="Enter Search Phrase", fontSize = 15.sp) },
+                placeholder = { Text(text="Enter Search Phrase",  fontFamily= karlaFontFamily,fontSize = 16.sp) },
                 leadingIcon = { Icon( imageVector = Icons.Default.Search, contentDescription = "") },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -133,35 +151,41 @@ fun Home(navController: NavHostController) {
         ){
 
             Text(text = "ORDER FOR DELIVERY!",
-                fontSize = 24.sp,
+                fontFamily= karlaFontFamily,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 20.sp,
                 modifier = Modifier.padding(10.dp)
             )
             Row(horizontalArrangement = Arrangement.SpaceAround,
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Button(
-                    colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
+                    colors = ButtonDefaults.buttonColors(containerColor = YellowLittleLemon),
                     shape = RoundedCornerShape(50),
+                    contentPadding = PaddingValues(10.dp),
                     modifier=Modifier,
                     onClick = { categoryFiltered = "starters" }
                 ) {Text(
                     text = "Starters",
                     textAlign = TextAlign.Center,
-                    fontSize = 15.sp,
+                    fontFamily = karlaFontFamily,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
                     color= GreyLittleLemon,
                     modifier=Modifier
                 )
                 }
                 Button(
-                    colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
+                    colors = ButtonDefaults.buttonColors(containerColor = YellowLittleLemon),
                     shape = RoundedCornerShape(50),
+                    contentPadding = PaddingValues(10.dp),
                     modifier=Modifier,
                     onClick = { categoryFiltered = "mains" }
                 ) {Text(
                     text = "Mains",
                     textAlign = TextAlign.Center,
-                    fontSize = 15.sp,
+                    fontFamily = karlaFontFamily,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
                     color= GreyLittleLemon,
                     modifier=Modifier
@@ -170,14 +194,16 @@ fun Home(navController: NavHostController) {
 
                 }
                 Button(
-                    colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
+                    colors = ButtonDefaults.buttonColors(containerColor = YellowLittleLemon),
                     shape = RoundedCornerShape(50),
+                    contentPadding = PaddingValues(10.dp),
                     modifier=Modifier,
                     onClick = { categoryFiltered = "desserts" }
                 ) {Text(
                     text = "Desserts",
                     textAlign = TextAlign.Center,
-                    fontSize = 15.sp,
+                    fontFamily = karlaFontFamily,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
                     color= GreyLittleLemon,
                     modifier=Modifier
@@ -186,14 +212,16 @@ fun Home(navController: NavHostController) {
 
                 }
                 Button(
-                    colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
+                    colors = ButtonDefaults.buttonColors(containerColor = YellowLittleLemon),
                     shape = RoundedCornerShape(50),
+                    contentPadding = PaddingValues(10.dp),
                     modifier=Modifier,
                     onClick = { categoryFiltered= "drinks" }
                 ) {Text(
                     text = "Drinks",
                     textAlign = TextAlign.Center,
-                    fontSize = 15.sp,
+                    fontFamily = karlaFontFamily,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
                     color= GreyLittleLemon,
                     modifier=Modifier
@@ -241,49 +269,63 @@ fun Header(navController: NavHostController){
 @Composable
 fun Hero(){
     Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(300.dp)
-            .background(GreyLittleLemon)
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(GreyLittleLemon),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         Text(
             text = "Little Lemon",
-            fontSize = 32.sp,
+            modifier = Modifier
+                .padding(start = 10.dp, top = 0.dp)
+                .height(50.dp),
+            fontSize = 60.sp,
+            fontFamily = markazitextFontFamily,
+            fontWeight = FontWeight.Medium,
             color=  YellowLittleLemon,
-            modifier = Modifier.padding(start=10.dp,top=10.dp)
         )
         Text(
             "Chicago",
-            fontSize = 24.sp,
-            color= WhiteLittleLemon,
-            modifier = Modifier.padding(start=10.dp)
+            modifier = Modifier
+                .padding(start = 10.dp, top = 0.dp)
+                .height(45.dp),
+            fontFamily = markazitextFontFamily,
+            fontSize = 40.sp,
+            color = WhiteLittleLemon,
         )
-        Row (horizontalArrangement = Arrangement.SpaceBetween,
+        Row (
+            horizontalArrangement = Arrangement.SpaceAround,
             modifier= Modifier
                 .fillMaxWidth()
-                .padding(10.dp)
+                .padding(start = 0.dp, top = 0.dp)
                 .height(130.dp),
         ){
-            Text(text = "We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist",
-                fontSize = 20.sp,
-                color= WhiteLittleLemon,
-                modifier = Modifier.width(230.dp)
-            )
-            Image(
-                painterResource(id = R.drawable.hero_image) ,
-                contentDescription = "hero image",
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .size(120.dp)
-                    .clip(RoundedCornerShape(20.dp))
-            )
+                Text(
+                    text = "We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.",
+                    fontFamily = karlaFontFamily,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 16.sp,
+                    color = WhiteLittleLemon,
+                    modifier = Modifier
+                        .width(230.dp)
+                        .padding(top = 10.dp)
+                )
+                Image(
+                    painterResource(id = R.drawable.hero_image) ,
+                    contentDescription = "hero image",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(120.dp)
+                        .clip(RoundedCornerShape(20.dp))
+
+                )
         }
         var searchPhrase by remember{
             mutableStateOf("")
         }
         TextField(
             value = searchPhrase,
-            placeholder = { Text(text="Enter Search Phrase", fontSize = 15.sp) },
+            placeholder = { Text(text="Enter Search Phrase", fontFamily= karlaFontFamily,fontSize = 16.sp) },
             leadingIcon = { Icon( imageVector = Icons.Default.Search, contentDescription = "") },
             modifier = Modifier
                 .fillMaxWidth()
@@ -300,21 +342,25 @@ fun MenuBreakdown(){
 
     ){
         Text(text = "ORDER FOR DELIVERY!",
-            fontSize = 24.sp,
+            fontFamily= karlaFontFamily,
+            fontWeight = FontWeight.ExtraBold,
+            fontSize = 20.sp,
             modifier = Modifier.padding(10.dp)
         )
         Row(horizontalArrangement = Arrangement.SpaceAround,
             modifier = Modifier.fillMaxWidth()
         ) {
             Button(
-                colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
+                colors = ButtonDefaults.buttonColors(containerColor = YellowLittleLemon),
                 shape = RoundedCornerShape(50),
+                contentPadding = PaddingValues(10.dp),
                 modifier=Modifier,
                 onClick = { }
                  ) {Text(
                                     text = "Starters",
                                     textAlign = TextAlign.Center,
-                                    fontSize = 15.sp,
+                                    fontFamily = karlaFontFamily,
+                                    fontSize = 16.sp,
                                     fontWeight = FontWeight.Medium,
                                     color= GreyLittleLemon,
                                     modifier=Modifier
@@ -323,12 +369,14 @@ fun MenuBreakdown(){
             Button(
                     colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
                     shape = RoundedCornerShape(50),
+                    contentPadding = PaddingValues(10.dp),
                     modifier=Modifier,
                     onClick = { /*TODO*/ }
                     ) {Text(
                                     text = "Mains",
                                     textAlign = TextAlign.Center,
-                                    fontSize = 15.sp,
+                                    fontFamily = karlaFontFamily,
+                                    fontSize = 16.sp,
                                     fontWeight = FontWeight.Medium,
                                     color= GreyLittleLemon,
                                     modifier=Modifier
@@ -339,12 +387,14 @@ fun MenuBreakdown(){
             Button(
                 colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
                 shape = RoundedCornerShape(50),
+                contentPadding = PaddingValues(10.dp),
                 modifier=Modifier,
                 onClick = { /*TODO*/ }
             ) {Text(
                 text = "Desserts",
                 textAlign = TextAlign.Center,
-                fontSize = 15.sp,
+                fontFamily = karlaFontFamily,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.Medium,
                 color= GreyLittleLemon,
                 modifier=Modifier
@@ -354,13 +404,15 @@ fun MenuBreakdown(){
             }
             Button(
                 colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
-                shape = RoundedCornerShape(50),
+                shape = RoundedCornerShape(40),
+                contentPadding = PaddingValues(10.dp),
                 modifier=Modifier,
                 onClick = { /*TODO*/ }
             ) {Text(
                 text = "Drinks",
                 textAlign = TextAlign.Center,
-                fontSize = 15.sp,
+                fontFamily = karlaFontFamily,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.Medium,
                 color= GreyLittleLemon,
                 modifier=Modifier
@@ -377,12 +429,14 @@ private fun MenuItemsList(items: List<MenuItemRoom>) {
     LazyColumn(
         modifier = Modifier
             .fillMaxHeight()
-            .padding(top = 20.dp)
+            .padding(top = 10.dp)
     ) {
         items(
             items = items,
             itemContent = { menuItem ->
-                Card {
+                Card (
+                    border = BorderStroke(1.dp, GreyLittleLemon),
+                ){
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -392,21 +446,28 @@ private fun MenuItemsList(items: List<MenuItemRoom>) {
                         Column{
                             Text(
                                 menuItem.title,
+                                fontFamily = karlaFontFamily,
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.Bold,
                                 modifier = Modifier.padding(top = 5.dp)
                             )
                             Text(
                                 menuItem.description,
+                                fontFamily = karlaFontFamily,
+                                fontWeight = FontWeight.Normal,
+                                fontSize = 16.sp,
+                                lineHeight = 16.sp,
                                 color = GreyLittleLemon,
                                 modifier = Modifier
                                     .padding(top = 5.dp, bottom = 5.dp)
                                     .fillMaxWidth(.75f)
                             )
                             Text(
-                                "$ ${menuItem.price}",
+                                "$ ${DecimalFormat("#.00").format(menuItem.price.toDouble())}",
                                 color = GreyLittleLemon,
-                                fontWeight = FontWeight.Bold
+                                fontFamily = karlaFontFamily,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 16.sp
                             )
                         }
                         MyView(menuItem.image)
@@ -427,7 +488,7 @@ fun MyView(menuItem:String){
             .size(90.dp)
         )
 }
-
+@Preview
 @Composable
 fun HomePreview(){
     Home(navController = rememberNavController())
@@ -448,7 +509,7 @@ fun HeroPreview(){
 fun MenuBreakdownPreview(){
     MenuBreakdown()
 }
-@Preview
+/*@Preview
 @Composable
 private fun MenuItemsListPreview(){
 
@@ -475,3 +536,4 @@ private fun MenuItemsListPreview(){
     )
     MenuItemsList(items = items)
 }
+*/
