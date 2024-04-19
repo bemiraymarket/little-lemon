@@ -78,8 +78,9 @@ fun Profile(navController: NavHostController) {
             value = firstName.value,
             onValueChange ={},
             modifier= Modifier
-                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
                 .fillMaxWidth()
+                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
+                .height(40.dp)
         )
         Text("Last Name",
             fontFamily = karlaFontFamily,
@@ -92,8 +93,9 @@ fun Profile(navController: NavHostController) {
             value = lastName.value,
             onValueChange ={},
             modifier= Modifier
-                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
                 .fillMaxWidth()
+                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
+                .height(40.dp)
         )
         Text("Email",
             fontFamily = karlaFontFamily,
@@ -106,8 +108,9 @@ fun Profile(navController: NavHostController) {
             value = emailAddress.value,
             onValueChange ={},
             modifier= Modifier
-                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
                 .fillMaxWidth()
+                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
+                .height(40.dp)
         )
         Spacer(modifier = Modifier.padding(50.dp))
         Button(

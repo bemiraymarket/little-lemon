@@ -1,5 +1,6 @@
 [versions]
 agp = "8.3.1"
+coreSplashscreen = "1.0.1"
 datastorePreferences = "1.0.0"
 glide = "4.16.0"
 kotlin = "1.9.0"
@@ -20,6 +21,7 @@ runtimeLivedata = "1.6.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }

@@ -53,6 +53,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.core.splashscreen)
     implementation ("com.github.bumptech.glide:compose:1.0.0-beta01")
     implementation (libs.androidx.runtime.livedata)
     implementation(libs.androidx.room.runtime)
