@@ -81,13 +81,13 @@ fun Home(navController: NavHostController) {
                 .background(GreyLittleLemon)
         ) {
             Text(
-                text = "Little Lemon",
+                text = "Bemiray market",
                 fontSize = 32.sp,
                 color=  YellowLittleLemon,
                 modifier = Modifier.padding(start=10.dp,top=10.dp)
             )
             Text(
-                "Chicago",
+                "Toamasina",
                 fontSize = 24.sp,
                 color= WhiteLittleLemon,
                 modifier = Modifier.padding(start=10.dp)
@@ -98,13 +98,13 @@ fun Home(navController: NavHostController) {
                     .padding(10.dp)
                     .height(130.dp),
             ){
-                Text(text = "We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist",
+                Text(text = "mivarotra ny zavatra ilainao an-davan'andro amin'ny vidiny mirary",
                     fontSize = 20.sp,
                     color= WhiteLittleLemon,
                     modifier = Modifier.width(230.dp)
                 )
                 Image(
-                    painterResource(id = R.drawable.hero_image) ,
+                    painterResource(id = R.drawable.arona) ,
                     contentDescription = "hero image",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
@@ -117,7 +117,7 @@ fun Home(navController: NavHostController) {
             }
             TextField(
                 value = searchPhrase,
-                placeholder = { Text(text="Enter Search Phrase", fontSize = 15.sp) },
+                placeholder = { Text(text="Soraty ny zavatra tianao", fontSize = 15.sp) },
                 leadingIcon = { Icon( imageVector = Icons.Default.Search, contentDescription = "") },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -132,7 +132,7 @@ fun Home(navController: NavHostController) {
 
         ){
 
-            Text(text = "ORDER FOR DELIVERY!",
+            Text(text = "Livraison à domicile",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(10.dp)
             )
@@ -143,7 +143,7 @@ fun Home(navController: NavHostController) {
                     colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
                     shape = RoundedCornerShape(50),
                     modifier=Modifier,
-                    onClick = { categoryFiltered = "starters" }
+                    onClick = { categoryFiltered = "Boissons" }
                 ) {Text(
                     text = "Starters",
                     textAlign = TextAlign.Center,
@@ -157,7 +157,7 @@ fun Home(navController: NavHostController) {
                     colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
                     shape = RoundedCornerShape(50),
                     modifier=Modifier,
-                    onClick = { categoryFiltered = "mains" }
+                    onClick = { categoryFiltered = "Tsaky" }
                 ) {Text(
                     text = "Mains",
                     textAlign = TextAlign.Center,
@@ -173,7 +173,7 @@ fun Home(navController: NavHostController) {
                     colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
                     shape = RoundedCornerShape(50),
                     modifier=Modifier,
-                    onClick = { categoryFiltered = "desserts" }
+                    onClick = { categoryFiltered = "Paty" }
                 ) {Text(
                     text = "Desserts",
                     textAlign = TextAlign.Center,
@@ -189,7 +189,7 @@ fun Home(navController: NavHostController) {
                     colors = ButtonDefaults.buttonColors(containerColor = ClayLittleLemon),
                     shape = RoundedCornerShape(50),
                     modifier=Modifier,
-                    onClick = { categoryFiltered= "drinks" }
+                    onClick = { categoryFiltered= "Ronono" }
                 ) {Text(
                     text = "Drinks",
                     textAlign = TextAlign.Center,
@@ -217,7 +217,7 @@ fun Header(navController: NavHostController){
     ){
         Spacer(modifier = Modifier.padding(40.dp))
         Image(
-            painterResource(id = R.drawable.logo),
+            painterResource(id = R.drawable.bemiray_logo),
             contentDescription = "logo",
             modifier = Modifier
                 .size(200.dp)
