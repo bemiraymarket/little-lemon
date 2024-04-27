@@ -811,6 +811,7 @@
   <component name="ProcessedFilesStorage">
     <timestamps>
       <entry key="06021598ffba3ad656d87a284f1b7b92" value="1714221258570" />
+      <entry key="7816fb258d9791a3d91680f7652b4d60" value="1714224345417" />
       <entry key="8ae47ca2b59384fe24fa9280b26642e6" value="1714221855948" />
       <entry key="a093672df6b15fd46e8d7ad1e0e7e821" value="1714220896111" />
       <entry key="d7d72b662209896963922d1fb3dcc804" value="1714223501856" />
@@ -819,7 +820,7 @@
   <component name="ProjectUserFactors">
     <factor id="completionFinishedType">
       <dailyData date="27-04-2024">
-        <observation name="cancelled" value="1,0" />
+        <observation name="cancelled" value="17,0" />
         <observation name="explicitSelect" value="2,0" />
       </dailyData>
     </factor>
@@ -830,7 +831,7 @@
     </factor>
     <factor id="completionUsage">
       <dailyData date="27-04-2024">
-        <observation name="count" value="3,0" />
+        <observation name="count" value="19,0" />
       </dailyData>
     </factor>
     <factor id="fullLineFactors" />
@@ -869,10 +870,10 @@
     </factor>
   </component>
   <component name="VcsLogIndexCollector">
-    <option name="indexTime" value="102" />
+    <option name="indexTime" value="276" />
     <option name="indexTimeByRoot">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="115" />
+        <entry key="$PROJECT_DIR$/.." value="289" />
       </map>
     </option>
   </component>

@@ -42,8 +42,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/littlelemon/Home.kt">
           <provider editor-type-id="android-source-code" selected="true">
             <state selected-layout="SHOW_EDITOR">
-              <editor-state relative-caret-position="334">
-                <caret line="135" column="33" selection-start-line="135" selection-start-column="33" selection-end-line="135" selection-end-column="33" />
+              <editor-state relative-caret-position="246">
+                <caret line="131" selection-start-line="131" selection-end-line="131" />
               </editor-state>
               <multi-preview-state selected="Compose">
                 <representations>
@@ -156,8 +156,8 @@
   </component>
   <component name="ToolWindowManager">
     <layoutV2>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2890625" />
-      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2890625" />
+      <window_info id="Commit" order="1" visible="true" weight="0.2890625" />
       <window_info id="Resources Explorer" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -178,6 +178,7 @@
       <unified_weights bottom="0.3296893" left="0.2890625" right="0.2503125" />
     </layoutV2>
     <recentWindows>
+      <value>Commit</value>
       <value>Project</value>
       <value>Problems View</value>
       <value>Notifications</value>
@@ -196,6 +197,10 @@
       <screen x="0" y="0" width="1600" height="869" />
     </state>
     <state x="304" y="69" width="992" height="732" key="SettingsEditor/0.0.1600.869@0.0.1600.869" timestamp="1714056125668" />
+    <state x="420" y="256" width="800" height="534" key="Vcs.Push.Dialog.v2" timestamp="1714224599354">
+      <screen x="0" y="0" width="1600" height="869" />
+    </state>
+    <state x="420" y="256" width="800" height="534" key="Vcs.Push.Dialog.v2/0.0.1600.869@0.0.1600.869" timestamp="1714224599354" />
     <state x="587" y="207" width="416" height="457" key="chooseDestDirectoryDialog" timestamp="1714222955230">
       <screen x="0" y="0" width="1600" height="869" />
     </state>
@@ -233,8 +238,8 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/littlelemon/Home.kt">
       <provider selected="true" editor-type-id="android-source-code">
         <state selected-layout="SHOW_EDITOR">
-          <editor-state relative-caret-position="334">
-            <caret line="135" column="33" lean-forward="true" selection-start-line="135" selection-start-column="33" selection-end-line="135" selection-end-column="33" />
+          <editor-state relative-caret-position="246">
+            <caret line="131" selection-start-line="131" selection-end-line="131" />
           </editor-state>
           <multi-preview-state selected="Compose">
             <representations>
