@@ -32,6 +32,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.littlelemon.ui.theme.BlackLittleLemon
 import com.example.littlelemon.ui.theme.WhiteLittleLemon
 import com.example.littlelemon.ui.theme.YellowLittleLemon
+import com.example.littlelemon.ui.theme.karlaFontFamily
 
 @Composable
 fun Profile(navController: NavHostController) {
@@ -58,14 +59,16 @@ fun Profile(navController: NavHostController) {
             )
         }
         Text("Personal information",
+            fontFamily = karlaFontFamily,
             fontSize = 18.sp,
             fontWeight = FontWeight.Medium,
-            textAlign = TextAlign.Left,
+            textAlign = TextAlign.Center,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(20.dp)
         )
         Text("First Name",
+            fontFamily = karlaFontFamily,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(15.dp, bottom = 0.dp)
@@ -75,11 +78,12 @@ fun Profile(navController: NavHostController) {
             value = firstName.value,
             onValueChange ={},
             modifier= Modifier
-                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
                 .fillMaxWidth()
+                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
+                .height(40.dp)
         )
         Text("Last Name",
-
+            fontFamily = karlaFontFamily,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(15.dp, top = 15.dp, bottom = 0.dp)
@@ -89,10 +93,12 @@ fun Profile(navController: NavHostController) {
             value = lastName.value,
             onValueChange ={},
             modifier= Modifier
-                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
                 .fillMaxWidth()
+                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
+                .height(40.dp)
         )
         Text("Email",
+            fontFamily = karlaFontFamily,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(15.dp, top = 15.dp, bottom = 0.dp)
@@ -102,8 +108,9 @@ fun Profile(navController: NavHostController) {
             value = emailAddress.value,
             onValueChange ={},
             modifier= Modifier
-                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
                 .fillMaxWidth()
+                .padding(start = 10.dp, top = 0.dp, bottom = 10.dp, end = 10.dp)
+                .height(40.dp)
         )
         Spacer(modifier = Modifier.padding(50.dp))
         Button(
@@ -119,8 +126,9 @@ fun Profile(navController: NavHostController) {
             Text(
                 text = "Log out",
                 textAlign = TextAlign.Center,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Normal,
+                fontFamily = karlaFontFamily,
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Medium,
                 color= BlackLittleLemon,
                 modifier=Modifier.fillMaxWidth()
             )
